@@ -7,7 +7,7 @@ import math
 class WineDataset(Dataset):
     def __init__(self):
         # Data loading
-        xy = np.loadtxt('/Users/rishabhmathur/Documents/Development/Machine Learning/PyTorch/wine.csv', delimiter=",", 
+        xy = np.loadtxt('/wine.csv', delimiter=",", 
                         skiprows=1, dtype=np.float32)
 
         self.x = torch.from_numpy(xy[:, 1:]) # (n_samples, all columns except 0th)
